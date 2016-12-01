@@ -123,7 +123,7 @@ var metricPlace = map[string][]string{
 	"rejected_fetch_shard_store":  {"thread_pool", "fetch_shard_store", "rejected"},
 	"rejected_listener":           {"thread_pool", "listener", "rejected"},
 	"rejected_force_merge":        {"thread_pool", "force_merge", "rejected"},
-	"transport_opened":            {"transport", "server_open"},
+	"transport_open":              {"transport", "server_open"},
 }
 
 func getFloatValue(s map[string]interface{}, keys []string) (float64, error) {
@@ -407,7 +407,7 @@ func (p ElasticsearchPlugin) GraphDefinition() map[string]mp.Graphs {
 			Label: (p.LabelPrefix + " Transport"),
 			Unit:  "integer",
 			Metrics: []mp.Metrics{
-				{Name: "transport_open", Label: "Opened"},
+				{Name: "transport_open", Label: "Open"},
 			},
 		},
 	}
