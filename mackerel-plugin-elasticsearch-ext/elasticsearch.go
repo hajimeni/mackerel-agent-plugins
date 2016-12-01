@@ -313,8 +313,8 @@ func (p ElasticsearchPlugin) GraphDefinition() map[string]mp.Graphs {
 			Label: (p.LabelPrefix + " JVM Heap Survivor Mem"),
 			Unit:  "integer",
 			Metrics: []mp.Metrics{
-				{Name: "heap_suvivor_used", Label: "Used"},
-				{Name: "heap_suvivor_max", Label: "Max"},
+				{Name: "heap_survivor_used", Label: "Used"},
+				{Name: "heap_survivor_max", Label: "Max"},
 			},
 		},
 		p.Prefix + ".jvm.heap_old": {
